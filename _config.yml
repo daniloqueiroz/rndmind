@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Random Thoughts
+title: Random Mind
 subtitle: Random thoughts from a dev's mind
 description: |
   This isn't the traditional dev personal website.
@@ -19,7 +19,7 @@ language: en
 timezone: 'America/Toronto'
 
 # URL
-url: http://randomthoughts.dev
+url: http://rndmind.dev
 root: /
 permalink: /:title/
 permalink_defaults:
@@ -53,7 +53,9 @@ archive_dir: thoughts
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: assets
+skip_render:
+  - "static/*"
+  - CNAME
 
 # Writing
 new_post_name: :title.md # File name of new posts
