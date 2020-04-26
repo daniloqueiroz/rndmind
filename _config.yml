@@ -1,0 +1,137 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Random Thoughts
+subtitle: Random thoughts from a dev's mind
+description: |
+  This isn't the traditional dev personal website.
+  The thoughts/ideas resembles the blog/project structure, but there are subtle differences to it.
+
+  The goal of this site is to act as a brain dump, as space for random thought experiments of some sort.
+  Thoughts are fragments of thoughts, similar to blog posts, but in a forever draft state, becoming atemporal.
+  Ideas are a collection of unfinished/unstarted/finished(?) projects.
+  Finally, links is just a collection of interesting links.
+keywords:
+author: Danilo Queiroz
+language: en
+timezone: 'America/Toronto'
+
+# URL
+url: http://randomthoughts.dev
+root: /
+permalink: /:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+
+## Theme & Content
+theme: cactus
+theme_config:
+  colorscheme: dark
+nav:
+  Home: /
+  Thoughts: /thoughts
+  Ideas: /ideas
+  Links: /links
+social_links:
+  spotify: https://open.spotify.com/user/1129416099
+  github: https://github.com/daniloqueiroz
+  linkedin: https://linkedin.com/in/daniloqueiroz
+google_analytics:
+  enabled: true
+  id: UA-164300060-1
+
+# Directory
+source_dir: content
+public_dir: public
+tag_dir: tags
+archive_dir: thoughts
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render: assets
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
+markdown: 'default'
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## Use post's date for updated date unless set in front-matter
+use_date_for_updated: false
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 25
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Atom Feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: /images/brain.png
+  autodiscovery: true
+  template:
+
+# Sitemap.xml
+sitemap:
+  path: sitemap.xml
+  template: ./themes/sitemap.xml
+  rel: false
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:daniloqueiroz/me.git
+  branch: gh-pages

@@ -1,0 +1,17 @@
+<section id="thoughts">
+    <span class="h1"><a href="<%- url_for("thoughts") %>">Thoughts</a></span>
+
+    <ul class="post-list">
+        <% var all_posts = site.posts.sort('updated', 'desc') %>
+        <% var display_posts = limit != null ? all_posts.limit(limit) : all_posts %>
+        <% display_posts.each(function(post, i){ %>
+            <li class="post-item">
+                <span class="meta"><%- partial('_partial/post/title', {post: post, index: true, class_name: ''}) %></span>
+                <%- partial('_partial/post/tag', { tags: post.tags }) %>
+            </li>
+        <% }); %>
+    </ul>
+    <% if (limit != null) { %>
+        <span class="more-link"><a href="<%- url_for("thoughts") %>">more...</a></span>
+    <% } %>
+</section>

@@ -1,0 +1,18 @@
+<section id="links">
+    <span class="h1"><a href="<%- url_for("links") %>">Links</a></span>
+    <ul class="post-list">
+        <% var all_links = site.data.links %>
+        <% var display_links = limit != null ? all_links.slice(0, limit) : all_links %>
+        <% for (var idx in display_links) { %>
+            <li class="post-item">
+                <span class="meta">
+                    <a href="<%= site.data.links[idx].url %>"><%= site.data.links[idx].title %></a>
+                </span>
+                <%- partial('_partial/post/tag', { tags: site.data.links[idx].tags }) %>
+            </li>
+        <% } %>
+    </ul>
+    <% if (limit > 0) { %>
+        <span class="more-link"><a href="<%- url_for("links") %>">more...</a></span>
+    <% } %>
+</section>

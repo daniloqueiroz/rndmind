@@ -1,0 +1,29 @@
+<section id="links">
+    <span class="h1"><a href="<%- url_for("tags") %>">Tags</a></span>
+    <ul class="post-list">
+        <% site.tags.each(function(tag, x){ %>
+            <li class="article-tag">
+                <i class="fas fa-tag"></i>
+                <a class="link" href="<%= url_for('tags/' + tag.name) %>"><%= tag.name%></a>
+            </li>
+        <% }); %>
+        <% site.pages.each(function(page, x){ %>
+            <% for(var tag_idx in page.page_tags) { %>
+                <% var tag = site.pages[idx].page_tags %>
+                <li class="article-tag">
+                    <i class="fas fa-tag"></i>
+                    <a class="link" href="<%= url_for('tags/' + tag) %>"><%= tag %></a>
+                </li>
+            <% } %>
+        <% }); %>
+        <% for (var idx in site.data.links) { %>
+            <% for(var tag_idx in site.data.links[idx].tags) { %>
+                <% var tag = site.data.links[idx].tags[tag_idx] %>
+                <li class="article-tag">
+                    <i class="fas fa-tag"></i>
+                    <a class="link" href="<%= url_for('tags/' + tag) %>"><%= tag %></a>
+                </li>
+            <% } %>
+        <% } %>
+    </ul>
+</section>

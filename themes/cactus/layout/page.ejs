@@ -1,0 +1,21 @@
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="content" itemprop="articleBody">
+        <% if (page.type === "tags") { %>
+            <%- partial('_partial/tag-list') %>
+        <% } else if (page.type === 'links-list') { %>
+                <%- partial('_partial/links', { limit: null }) %>
+        <% } else if (page.type === 'ideas-list') { %>
+                <%- partial('_partial/ideas', { limit: null }) %>
+        <% } else { %>
+            <header>
+                <%- partial('_partial/post/title', { post: page, index: false, class_name: 'posttitle' }) %>
+                <div class="meta">
+                    <%- partial('_partial/post/date', { post: page, class_name: 'postdate' }) %>
+                    <%- partial('_partial/post/tag', { tags: page.page_tags }) %>
+                </div>
+            </header>
+            <%- partial('_partial/post/gallery') %>
+            <%- markdown(page.content) %>
+        <% } %>
+    </div>
+</article>

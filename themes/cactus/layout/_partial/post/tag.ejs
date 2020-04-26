@@ -1,0 +1,19 @@
+<% if (tags && tags.length) { %>
+    <div class="meta">
+        <i class="fas fa-tag"></i>
+        <% var nb_tags = tags.length %>
+        <% var i = 0 %>
+        <% if (tags.each) { %>
+            <% tags.each(function(tag, x){ %>
+                #<%= tag.name%><%= (nb_tags > 0 && i < nb_tags - 1 ?', ' : '') %>
+                <% i += 1 %>
+            <% }); %>
+        <% } else { %>
+            <% for(var tag_idx in tags) { %>
+                <% var tag = tags[tag_idx] %>
+                #<%= tag %><%= (nb_tags > 0 && i < nb_tags - 1 ?', ' : '') %>
+                <% i += 1 %>
+            <% } %>
+        <% } %>
+    </div>
+<% } %>

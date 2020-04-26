@@ -1,0 +1,24 @@
+<section id="about">
+    <%- markdown(config.description) %>
+    <p>
+        <%= __('index.find_me_on') %>
+        <% var nb_links = Object.keys(config.social_links).length %>
+        <% var i = 0 %>
+        <% for(var link in config.social_links) { %>
+            <a class="icon" target="_blank" rel="noopener" href="<%- url_for(config.social_links[link]) %>">
+                <i class="fab fa-<%= link %>"></i>
+            </a>
+            <%= (nb_links > 0 && i < nb_links - 1 ?
+                    (i == nb_links - 2 ? ' ' + __('index.enum_and') + ' '
+                            : __('index.enum_comma') + ' ')
+                    : '.') %>
+            <% i += 1 %>
+        <% } %>
+    </p>
+</section>
+
+<%- partial('_partial/ideas', {limit: 5}) %>
+
+<%- partial('_partial/thoughts', {limit: 5}) %>
+
+<%- partial('_partial/links', {limit: 5}) %>

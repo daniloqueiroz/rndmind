@@ -1,0 +1,9 @@
+<% if (post.date) { %>
+    <div class="<%= class_name %>">
+      <% if (is_post()) { %>
+        Last modified: <time datetime="<%= date_xml(post.updated) %>" itemprop="dateModified"><%= date(post.updated, config.date_format) %></time>
+      <% } else { %>
+        <time datetime="<%= date_xml(post.updated) %>" itemprop="dateModified"><%= date(post.updated, config.date_format) %></time>
+      <% } %>
+    </div>
+<% } %>
