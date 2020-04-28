@@ -1,11 +1,23 @@
+- title: Big Ball of Mud
+  url: http://www.laputan.org/mud/
+  tags:
+    - software design
 - title: A Thorough Introduction to Distributed Systems
   url: https://www.freecodecamp.org/news/a-thorough-introduction-to-distributed-systems-3b91562c9b3c/
   tags:
     - distributed systems
-- title: Finding Time to Become a Better Developer
-  url: https://www.freecodecamp.org/news/finding-time-to-become-a-better-developer-eebc154881b2/
+- title: The 25 most recommended programming books of all-time
+  url: https://www.daolf.com/posts/best-programming-books/
   tags:
-    - career
+    - books
+- title: Test Contra-variance
+  url: http://blog.cleancoder.com/uncle-bob/2017/10/03/TestContravariance.html
+  tags:
+    - testing
+    - software design
+- title: Latency numbers every programmer should know
+  url: https://gist.github.com/hellerbarde/2843375
+  tags:
 - title: Secure by Design
   url: https://henrikwarne.com/2020/03/22/secure-by-design/
   tags:
