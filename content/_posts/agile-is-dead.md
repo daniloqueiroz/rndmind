@@ -3,7 +3,6 @@ title: Agile is dead; Long live Agile
 updated: 2020-04-20 19:47:32
 tags: 
   - agile
-  - whatevs
 ---
 The year is 2019, agile is the standard for all modern software company. Scrum or Kanban, pick your flavor. OKRs is
 part of common language.
