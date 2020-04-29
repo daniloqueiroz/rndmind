@@ -23,3 +23,30 @@
   tags:
     - security
     - software design
+- title: Event Driven Architecture
+  url: https://pradeeploganathan.com/architecture/event-driven-architecture/
+  tags:
+    - software design
+- title: 96 Things Every Programmer Should Know
+  url: https://www.amazon.ca/Things-Every-Programmer-Should-Know/dp/0596809484
+  tags:
+    - books
+- title: Reading & Listening List
+  url: https://blog.pragmaticengineer.com/my-reading-list/
+  tags:
+    - books
+- title: Software Design in the 21st Century
+  url: https://www.youtube.com/watch?v=6wDoopbtEqk
+  tags:
+    - videos
+    - software design
+    - refactoring
+- title: Architecture the Lost Years by Robert Martin
+  url: https://www.youtube.com/watch?v=WpkDN78P884
+  tags:
+    - videos
+    - software design
+- title: How to Learn Software Design and Architecture - a Roadmap
+  url: https://www.freecodecamp.org/news/software-design/
+  tags:
+    - 
