@@ -4,6 +4,11 @@
     - microservices
     - distributed systems
     - architecture
+- title: The Eight Fallacies of Distributed Computing
+  url: https://www.youtube.com/watch?v=JG2ESDGwHHY
+  tags:
+    - videos
+    - distributed systems
 - title: Big Ball of Mud
   url: http://www.laputan.org/mud/
   tags:
