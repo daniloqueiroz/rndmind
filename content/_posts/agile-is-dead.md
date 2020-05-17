@@ -4,6 +4,7 @@ updated: 2020-04-20 19:47:32
 tags: 
   - agile
 ---
+
 The year is 2019, agile is the standard for all modern software company. Scrum or Kanban, pick your flavor. OKRs is
 part of common language.
 Don't believe me? Ask the agile coach!

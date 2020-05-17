@@ -81,7 +81,14 @@ highlight:
 
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
-markdown: 'default'
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: false
+    linkify: true
+    typographer: false
+    quotes: ''
 
 # Category & Tag
 default_category: uncategorized
