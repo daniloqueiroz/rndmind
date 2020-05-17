@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="First of all, let me make this clear, I&#39;m a fan of the Clean Architecture. That said, clean architecture isn&#39;t really an architecture - it&#39;s a concept, a set of principles that good architectures shar">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Screaming Architecture">
+<meta property="og:url" content="http://rndmind.dev/screaming-architecture/index.html">
+<meta property="og:site_name" content="Random Mind">
+<meta property="og:description" content="First of all, let me make this clear, I&#39;m a fan of the Clean Architecture. That said, clean architecture isn&#39;t really an architecture - it&#39;s a concept, a set of principles that good architectures shar">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-17T23:14:55.000Z">
+<meta property="article:modified_time" content="2020-04-25T23:57:11.000Z">
+<meta property="article:author" content="Danilo Queiroz">
+<meta property="article:tag" content="software design">
+<meta property="article:tag" content="clean architecture">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Screaming Architecture</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+      <link rel="alternate" href="/atom.xml" title="Random Mind" type="application/atom+xml" />
+    
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/thoughts">Thoughts</a></li>
+         
+          <li><a href="/ideas">Ideas</a></li>
+         
+          <li><a href="/links">Links</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/agile-is-dead/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://rndmind.dev/screaming-architecture/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://rndmind.dev/screaming-architecture/&text=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://rndmind.dev/screaming-architecture/&is_video=false&description=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Screaming Architecture&body=Check out this article: http://rndmind.dev/screaming-architecture/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://rndmind.dev/screaming-architecture/&name=Screaming Architecture&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://rndmind.dev/screaming-architecture/&t=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Screaming Architecture
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        Last modified: <time datetime="2020-04-25T23:57:11.000Z" itemprop="dateModified">2020-04-25</time>
+      
+    </div>
+
+
+      
+    <div class="meta">
+        <i class="fas fa-tag"></i>
+        
+        
+        
+            
+                #software design, 
+                
+            
+                #clean architecture
+                
+            
+        
+    </div>
+
+
+      3 min. read
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>First of all, let me make this clear, I'm a fan of the <strong>Clean Architecture</strong>.</p>
+<p>That said, clean architecture isn't really an architecture - it's a concept, a set of principles that good
+architectures share.
+Why it's important to call this out? Well, remember the idea of screaming architecture?
+The idea behind the screaming architecture is that the architecture should tell you the intent of that 'building'.
+The clean architecture isn't about the intent of your software, but about the intent of the pieces your software
+is built of.</p>
+<p>Let me step back for a second, so I can explain where I'm coming from.
+Have you ever tried to search for <a href="https://github.com/search?q=clean+architecture" target="_blank" rel="noopener">clean architecture on github</a>?
+There're dozens of examples of &quot;clean architecture with &lt;your favorite language&gt;&quot;. Some of them take it right, but on
+the vast majority of them what you see on the top-level are packages like <em>usecases</em>, <em>entities</em> , <em>adapters</em>, or
+equivalents.
+I ask yourself, how is that different from a rails app that on the top-level has <em>models</em>, <em>controllers</em>? How is that
+screaming the intent of the application.
+The way I see it is like having a blueprint which all the doors are in one room and all the windows are in another.
+Use cases, entities and adapters are conceptual abstractions, are the building blocks of your application but isn't your
+application. Use cases, entities and adapters, per se, don't constitute a solution to a problem.</p>
+<p>Your top-level should tell an adventurer what it's your software about. If it's an e-commerce you are going to have
+things like <em>cart</em>, <em>orders</em>, <em>inventory</em>.
+I believe the best way to achieve this is to start by focusing on your problem domain aspects. Forget about the
+database, forget about the web, forget about any framework. Tell me what problem you are trying to solve.
+As you continue building your application, you keep those clean architecture concepts in your head. Do you need some
+sort of persistence for the products on your catalog? Cool, define your repository interface, right there, side by side
+to all other catalog things, where it belongs. Need a place for the policies around how to calculate the final price of
+an order? Well, there should be a use case for that right in the orders package.
+Sure at some point you're going to need a place for the things that aren't part of your domain space - your repositories
+implementation, your REST and GRPC APIs. You might end up with a package called adapter(1), but that is OK, for the
+most part, when I take a glance at your code I know what it's about.</p>
+<p>(1) I usually call it drivers, just 'cause I like to get inspiration from OS architecture when building my apps.</p>
+
+  </div>
+</article>
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/thoughts">Thoughts</a></li>
+         
+          <li><a href="/ideas">Ideas</a></li>
+         
+          <li><a href="/links">Links</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://rndmind.dev/screaming-architecture/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://rndmind.dev/screaming-architecture/&text=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://rndmind.dev/screaming-architecture/&is_video=false&description=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Screaming Architecture&body=Check out this article: http://rndmind.dev/screaming-architecture/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://rndmind.dev/screaming-architecture/&title=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://rndmind.dev/screaming-architecture/&name=Screaming Architecture&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=http://rndmind.dev/screaming-architecture/&t=Screaming Architecture" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Danilo Queiroz
+    |
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"><img class="cc-by-sa"
+              src="https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png" alt="by-sa"/></a>
+    |
+    <a href="https://www.flaticon.com/authors/freepik" target="_blank" rel="noopener">Logo by Freepik</a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/thoughts">Thoughts</a></li>
+         
+          <li><a href="/ideas">Ideas</a></li>
+         
+          <li><a href="/links">Links</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-164300060-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+</body>
+</html>

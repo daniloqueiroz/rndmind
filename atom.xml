@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Random Mind</title>
+  <icon>http://rndmind.dev/images/brain.png</icon>
+  <subtitle>Random thoughts from a dev&#39;s mind</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://rndmind.dev/"/>
+  <updated>2020-04-20T23:47:32.000Z</updated>
+  <id>http://rndmind.dev/</id>
+  
+  <author>
+    <name>Danilo Queiroz</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Agile is dead; Long live Agile</title>
+    <link href="http://rndmind.dev/agile-is-dead/"/>
+    <id>http://rndmind.dev/agile-is-dead/</id>
+    <published>2020-05-17T23:14:55.000Z</published>
+    <updated>2020-04-20T23:47:32.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;The year is 2019, agile is the standard for all modern software company. Scrum or Kanban, pick your flavor. OKRs is
+part of common
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="agile" scheme="http://rndmind.dev/tags/agile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Screaming Architecture</title>
+    <link href="http://rndmind.dev/screaming-architecture/"/>
+    <id>http://rndmind.dev/screaming-architecture/</id>
+    <published>2020-05-17T23:14:55.000Z</published>
+    <updated>2020-04-25T23:57:11.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;First of all, let me make this clear, I&#39;m a fan of the &lt;strong&gt;Clean Architecture&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;That said, clean architecture isn&#39;t
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="software design" scheme="http://rndmind.dev/tags/software-design/"/>
+    
+      <category term="clean architecture" scheme="http://rndmind.dev/tags/clean-architecture/"/>
+    
+  </entry>
+  
+</feed>
