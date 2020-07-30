@@ -1,3 +1,7 @@
+- title: Practical Cryptography for Developers
+  url: https://cryptobook.nakov.com/
+  tags:
+    - cryptography
 - title: Microservice - not a free lunch!
   url: http://highscalability.com/blog/2014/4/8/microservices-not-a-free-lunch.html
   tags:
