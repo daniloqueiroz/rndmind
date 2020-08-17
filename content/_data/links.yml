@@ -1,3 +1,8 @@
+- title: Patterns of Distributed Systems
+  url: https://martinfowler.com/articles/patterns-of-distributed-systems/
+  tags:
+    - distributed systems
+    - software design
 - title: Practical Cryptography for Developers
   url: https://cryptobook.nakov.com/
   tags:
